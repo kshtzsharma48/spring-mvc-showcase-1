@@ -1,0 +1,11 @@
+This simple and stupid project is just a collection of things related to Spring MVC
+
+The idea of the projet is to showcase different features of Spring MVC in a single 
+web application. The features on the radar for this showcase are the following:
+
+- REST endpoints
+- Custom output (XML, json)
+- Content negociation
+- Runtime deployment of HTTP endpoints with various strategies
+- Views resolution
+
