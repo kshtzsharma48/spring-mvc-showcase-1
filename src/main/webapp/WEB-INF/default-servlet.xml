@@ -15,7 +15,6 @@
     <!-- Get the contributions from the modules -->
     <import resource="classpath*:/META-INF/mvc-showcase/*-beans-web.xml"/>
 
-
     <!-- Trigger MVC annotations on controllers -->
     <mvc:annotation-driven/>
 
@@ -42,27 +41,7 @@
 
     <!-- ================ Content negotiation and views resolvers ================ -->
 
-    <bean id="contentNegotiatingViewResolver"
-          class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
-        <property name="mediaTypes">
-            <map>
-                <entry key="html" value="text/html"/>
-                <entry key="xml" value="application/xml"/>
-                <entry key="json" value="application/json"/>
-            </map>
-        </property>
-        <property name="defaultViews">
-            <list>
-                <bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView"/>
-                <bean class="org.springframework.web.servlet.view.xml.MarshallingView">
-                    <constructor-arg>
-                        <bean class="org.springframework.oxm.xstream.XStreamMarshaller"/>
-                    </constructor-arg>
-                </bean>
-            </list>
-        </property>
-        <property name="defaultContentType" value="application/xml" />
-    </bean>
+    <!-- Content negotiation is broken still need to investigate. Only JSPs for now -->
 
     <!--
        Configure the JSP view resolver. For instance the logical view
