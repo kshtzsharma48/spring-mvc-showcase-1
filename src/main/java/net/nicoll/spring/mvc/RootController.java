@@ -17,7 +17,7 @@ public class RootController {
      *
      * @return a redirect to /index.html
      */
-    @RequestMapping("/foo")
+    @RequestMapping("/")
     public String homePage() {
         return "forward:/index.html";
     }
